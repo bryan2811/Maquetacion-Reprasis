@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema Reprasis</title>
+	<link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="src/css/popup.css">
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/c972563034.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Start of Async Callbell Code -->
+	<script> // NOTE: CALLBELL
+		window.callbellSettings = {
+		token: "MqqZdZR8Re1TK86Tj3GS81Er"
+		};
+	</script>
+	<script>
+		(function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+	</script>
+	<!-- End of Async Callbell Code -->
+</head>
+<body>
+	
+	<img class="wave" src="src/img/wave.png"> <!-- Background -->
+
+	<div class="container"> <!-- NOTE: CONTENEDOR PRINCIPAL -->
+		
+		<div class="img">
+			<img class="logo" src="src/img/logo-epyca.png" alt="Logo Epyca">
+			<img class="logo-reprasis" src="src/img/logo-reprasis.png" alt="Logo Epyca">
+			<img src="src/img/bg.svg">
+		</div><!-- .img -->
+		
+		<div class="login-content">
+			<form action="views/1. Inicio/Inicio.html">
+				<img src="src/img/avatar.svg">
+				<h2 class="title">Red de Prácticas Sistematizadas</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Usuario</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Contraseña</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Olvidaste tu usuario/contraseña?</a>
+				<input type="submit" class="btn" value="Ingresar">
+            </form>
+		</div><!-- login-content -->
+		
+		<footer>
+			<p>Fundación EPYCA - Pavón 763 (3000) Santa Fe - Argentina. Tel: +54 9 11 30414050 - info@reprasis.org</p>
+		</footer> <!-- Footer -->
+
+		<!-- Popup -->
+		<!-- <nav class="menu">
+			<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+			<label class="menu-open-button" for="menu-open">
+			  <span class="hamburger hamburger-1"></span>
+			  <span class="hamburger hamburger-2"></span>
+			  <span class="hamburger hamburger-3"></span>
+			</label>
+			
+			<a href="#" class="menu-item"> <i class="fas fa-question"></i> </a>
+			<a href="#" class="menu-item"> <i class="fab fa-facebook-f"></i> </a>
+			<a href="#" class="menu-item"> <i class="fab fa-twitter"></i> </a>
+			<a href="#" class="menu-item"> <i class="fab fa-youtube"></i> </a>
+		</nav> -->
+
+	</div><!-- .container -->
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+</body>
+</html>

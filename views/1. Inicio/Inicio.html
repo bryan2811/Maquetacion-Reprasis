@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sistema Reprasis</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/c972563034.js" crossorigin="anonymous"></script>
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../src/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+
+<div class="wrapper"> <!-- NOTE: CONTENEDOR -->
+  
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-teal"> <!-- NOTE: BARRA SUPERIOR -->
+    
+    <ul class="navbar-nav"> <!-- NOTE: TOGGLE DE LA BARRA IZQUIERDA  -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto"> <!-- NOTE: PERFIL DEL USUARIO -->
+      <li class="nav-item dropdown user-menu">
+        
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+          <img src="../../src/img/avatar.svg" class="user-image img-circle elevation-2" alt="User Image">
+          <span class="d-none d-md-inline">Reprasis Coordinación</span>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right"> 
+          <!-- Imagen del usuario -->
+          <li class="user-header bg-teal">
+            <img src="../../src/img/avatar.svg" class="img-circle elevation-2" alt="User Image">
+
+            <p>
+              Reprasis Coordinación
+              <small>Coordinadora</small>
+            </p>
+          </li>
+          <!-- Menu Footer-->
+          <li class="user-footer">
+            <a href="../../index.html" class="btn btn-default btn-flat d-block">Cerrar Sesión</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </nav> <!-- /.navbar -->
+
+
+  <aside class="main-sidebar sidebar-light-teal elevation-4"> <!-- NOTE: ASIDE IZQUIERDO -->
+    
+    <a href="./Reprasis-Inicio.html" class="brand-link navbar-teal">
+      <img src="../../src/img/logo-reprasis.jpeg"
+           alt="Reprasis Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-bold text-white">Sistema Reprasis</span>
+    </a>
+
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          
+          <li class="nav-item">
+          
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Inicio
+              </p>
+            </a>
+          </li><!-- Inicio -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-clipboard"></i>
+              <p>
+                Ficha Personal
+              </p>
+            </a>
+          </li><!-- Ficha Personal -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                MSP
+              </p>
+            </a>
+          </li><!-- MSP -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-search"></i>
+              <p>
+                Búsqueda de Prácticas
+              </p>
+            </a>
+          </li><!-- Búsqueda de prácticas -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Mensajería
+              </p>
+            </a>
+          </li><!-- Mensajeria -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-question"></i>
+              <p>
+                Más Información
+              </p>
+            </a>
+          </li><!-- Más Información -->
+
+        </ul>
+      </nav>
+    </div><!-- /.sidebar -->
+    
+  </aside>
+
+  <div class="content-wrapper"> <!-- NOTE: CONTENIDO PRINCIPAL -->
+    
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Red de Prácticas Sistematizadas</h1>
+          </div>
+        </div>
+      </div><!-- .container-fluid -->
+    </section><!-- .content-header -->
+
+    <section class="content">
+
+      <div class="container-fluid">
+        
+        <div class="row">
+          
+          <section class="col-lg-6"> <!-- NOTE: COLUMNA IZQUIERDA -->
+              
+              <div class="card card-teal text-center"> <!-- NOTE: GRÁFICO ÚLTIMAS PRÁCTICAS -->
+                <div class="card-header">
+                  <h3 class="card-title">Puntaje Promedio de las prácticas</h3>
+
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+                <!-- /.card-body -->
+              </div> <!-- .card -->
+              
+              <div class="card card-teal text-center"> <!-- NOTE: ÚLTIMAS PRÁCTICAS INSCRITAS -->
+                <div class="card-header">
+                  <h3 class="card-title mx-auto w-100">Últimas Prácticas Inscritas</h3>
+                </div>
+  
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                  <ul class="nav flex-column">
+                    
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Epyca<span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+  
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Reprasis <span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+  
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Formulación de Proyecto <span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Oriendator socio-familiar <span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+                <!-- /.card-body -->
+              </div> <!-- .card  -->
+
+              <div class="card card-teal text-center"><!-- NOTE: USUARIOS CONECTADOS -->
+                <div class="card-header">
+                  <h3 class="card-title mx-auto w-100">Usuarios Conectados</h3>
+                </div>
+
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                  <ul class="nav flex-column">
+                    
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Coordinación<span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Sistematizador<span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Tutor<span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.card-body -->
+              </div> <!-- .card -->
+              
+          </section><!-- col-lg-6 -->
+
+          <section class="col-lg-6"> <!-- NOTE: COLUMNA DERECHA -->
+
+            <div class="card card-warning text-center"> <!-- NOTE: AVISOS -->
+              <div class="card-header">
+                <h3 class="card-title mx-auto w-100 text-white">Avisos</h3>
+              </div>
+
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Modulo de consultas <span class="float-right"><i class="nav-icon far fa-circle text-warning"></i></span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Retraso de Sistematizadores <span class="float-right"><i class="nav-icon far fa-circle text-warning"></i></span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Retraso del equipo central <span class="float-right"><i class="nav-icon far fa-circle text-warning"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div> <!-- .card -->
+            
+          </section><!-- .col-lg-6 -->
+          
+        </div> <!-- .row -->
+
+      </div><!-- .container-fluid -->
+      
+    </section> <!-- .content -->
+
+  </div><!-- .content-wrapper -->
+    
+  <footer class="main-footer"> <!-- NOTE: FOOTER -->
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2007-2020 <a class="text-teal" href="http://www.reprasis.org/" target="_blank">Sistema Reprasis</a>.</strong> Todos los derechos reservados
+  </footer><!-- .main-footer -->
+
+  </div>
+  <!-- /.content-wrapper -->
+
+</div> <!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- jQuery UI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+<!-- Bootstrap 4 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- ChartJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+<!-- AdminLTE App -->
+<script src="../../src/js/adminlte.min.js"></script>
+
+<script> // NOTE: SCRIPT DEL GRÁFICO
+  $(function () {
+
+//-------------
+//- DONUT CHART -
+//-------------
+// Get context with jQuery - using jQuery's .get() method.
+var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+var donutData        = {
+  labels: [
+      'Alto', 
+      'Medio',
+      'Bajo'
+  ],
+  datasets: [
+    {
+      data: [66,31,3],
+      backgroundColor : ['#00a65a', '#f39c12', '#f56954'],
+    }
+  ]
+}
+var donutOptions     = {
+  maintainAspectRatio : false,
+  responsive : true,
+}
+//Create pie or douhnut chart
+// You can switch between pie and douhnut using the method below.
+var donutChart = new Chart(donutChartCanvas, {
+  type: 'doughnut',
+  data: donutData,
+  options: donutOptions      
+});
+});
+</script>
+
+</body>
+</html>
