@@ -71,7 +71,7 @@
   <aside class="main-sidebar sidebar-light-teal elevation-4"> <!-- NOTE: ASIDE IZQUIERDO -->
     
     <a href="./Inicio.html" class="brand-link navbar-teal">
-      <img src="../../src/img/logo-reprasis.jpeg"
+      <img src="../../src/img/logo-reprasis.png"
            alt="Reprasis Logo"
            class="brand-image img-circle elevation-3"
            style="opacity: .8">
@@ -374,6 +374,93 @@ var donutChart = new Chart(donutChartCanvas, {
   $('[data-toggle="tooltip"]').tooltip()
 });
 </script>
+
+<script src="https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js"></script>
+<script>
+  var preChatTemplate = {
+    //Form header color and Submit button color.
+    mainbgColor: '#0088CD',
+    //Form Header Text and Submit button text color.
+    maintxColor: '#fff',
+    //Chat Form Title
+    heading: 'Chat con Tutores',
+    //Chat form Welcome Message
+    textBanner: 'Este chat servirá para que realices tus consultas a los tutores. Pero primero, toma un momento para contarnos acerca de ti.',
+    //Submit Button Label.
+    SubmitLabel: 'Empezar Chat',
+    //Fields List - Maximum is 5
+    //All the values are mandatory and the script will not work if not available.
+    fields : {
+      field1 : {
+        //Type can be either text or title
+        type: "text",
+        //Label for Field Title, can be in any language
+        label: "Nombre de tu práctica",
+        //Field ID for Title
+        fieldId: "práctica",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Ingresa un nombre de práctica válido"
+      },
+      field2 : {
+        //Type for Name - Do not Change
+        type: "name",
+        //Label for Field Name, can be in any language
+        label: "Nombre completo",
+        //Default - Field ID for Name - Do Not Change
+        fieldId: "name",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Ingresa un nombre válido"
+      },
+      field3 : {
+        //Type for Email - Do Not Change
+        type: "email",
+        //Label for Field Email, can be in any language
+        label: "Correo Eléctronico",
+        //Default - Field ID for Email - Do Not Change
+        fieldId: "email",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Ingresa un correo válido"
+      },
+      field4 : {
+        //Type for Dropdown
+        type: "dropdown",
+        //Label for Field Dropdown, can be in any language
+        label: "¿Cursas la Diplomatura?",
+        //Field ID for Plan Dropdown
+        fieldId: "plan",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Por favor, selecciona una opción",
+        //Options for the Dropdown field
+        options: ['Sí','No']
+      }
+    }
+  };
+  window.fcSettings = {
+    token: "500639a8-a901-4257-bd75-6ea4c351b8d3",
+    host: "https://wchat.freshchat.com",
+    config: {
+      cssNames: {
+        //The below element is mandatory. Please add any custom class or leave the default.
+        widget: 'custom_fc_frame',
+        //The below element is mandatory. Please add any custom class or leave the default.
+        expanded: 'custom_fc_expanded'
+      }
+    },
+    onInit: function() {
+      console.log('widget init');
+      fcPreChatform.fcWidgetInit(preChatTemplate);
+    }
+  };
+</script>
+<script src="https://wchat.freshchat.com/js/widget.js" async></script>
 
 </body>
 </html>
