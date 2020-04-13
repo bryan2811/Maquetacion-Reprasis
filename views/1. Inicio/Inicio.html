@@ -167,12 +167,16 @@
               <div class="card card-teal text-center"> <!-- NOTE: GRÁFICO ÚLTIMAS PRÁCTICAS -->
                 <div class="card-header">
                   <h3 class="card-title">Puntaje Promedio de las prácticas</h3>
+                  
+                  <span class="float-right" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    <i class="far fa-question-circle"></i>
+                  </span><!-- Tooltip -->
 
-                  <div class="card-tools">
+                  <!-- <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                     </button>
                     <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-                  </div>
+                  </div> --> <!-- NOTE: BOTON PARA MINIMIZAR, ELIMINAR -->
                 </div>
                 <div class="card-body">
                   <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
@@ -182,7 +186,11 @@
               
               <div class="card card-teal text-center"> <!-- NOTE: ÚLTIMAS PRÁCTICAS INSCRITAS -->
                 <div class="card-header">
-                  <h3 class="card-title mx-auto w-100">Últimas Prácticas Inscritas</h3>
+                  <h3 class="card-title">Últimas Prácticas Inscritas</h3>
+
+                  <span class="float-right" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    <i class="far fa-question-circle"></i>
+                  </span><!-- Tooltip -->
                 </div>
   
                 <!-- /.card-header -->
@@ -220,7 +228,11 @@
 
               <div class="card card-teal text-center"><!-- NOTE: USUARIOS CONECTADOS -->
                 <div class="card-header">
-                  <h3 class="card-title mx-auto w-100">Usuarios Conectados</h3>
+                  <h3 class="card-title">Usuarios Conectados</h3>
+
+                  <span class="float-right" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    <i class="far fa-question-circle"></i>
+                  </span><!-- Tooltip -->
                 </div>
 
                 <!-- /.card-header -->
@@ -253,9 +265,13 @@
 
           <section class="col-lg-6"> <!-- NOTE: COLUMNA DERECHA -->
 
-            <div class="card card-warning text-center"> <!-- NOTE: AVISOS -->
+            <div class="card card-teal text-center"> <!-- NOTE: AVISOS -->
               <div class="card-header">
-                <h3 class="card-title mx-auto w-100 text-white">Avisos</h3>
+                <h3 class="card-title text-white">Avisos</h3>
+
+                <span class="float-right" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                  <i class="far fa-question-circle"></i>
+                </span><!-- Tooltip -->
               </div>
 
               <!-- /.card-header -->
@@ -263,19 +279,19 @@
                 <ul class="nav flex-column">
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      Modulo de consultas <span class="float-right"><i class="nav-icon far fa-circle text-warning"></i></span>
+                      Modulo de consultas <span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      Retraso de Sistematizadores <span class="float-right"><i class="nav-icon far fa-circle text-warning"></i></span>
+                      Retraso de Sistematizadores <span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
                     </a>
                   </li>
 
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      Retraso del equipo central <span class="float-right"><i class="nav-icon far fa-circle text-warning"></i></span>
+                      Retraso del equipo central <span class="float-right"><i class="nav-icon far fa-circle text-info"></i></span>
                     </a>
                   </li>
                 </ul>
@@ -309,6 +325,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- jQuery UI -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
 <!-- Bootstrap 4 -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- ChartJS -->
@@ -348,6 +366,12 @@ var donutChart = new Chart(donutChartCanvas, {
   data: donutData,
   options: donutOptions      
 });
+});
+</script>
+
+<script> // NOTE: SCRIPT DEL TOOLTIP DE POPPER JS
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
 });
 </script>
 
