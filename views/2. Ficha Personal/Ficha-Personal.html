@@ -16,6 +16,8 @@
   <!-- Select2 -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css" integrity="sha256-fxxvNo/vOD88AQfrGh88D74wgYex47k9+sa3bWmCelI=" crossorigin="anonymous" />
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -179,13 +181,13 @@
       </div><!-- .container-fluid -->
     </section><!-- .content-header -->
 
-    <section class="content"> <!-- NOTE: FILA 2 DATOS -->
+    <section class="content"> <!-- NOTE: DATOS -->
 
       <div class="container-fluid">
         
-        <div class="row">
+        <div class="row"> <!-- NOTE: FILA 2 -->
           
-          <section class="col-sm-6">
+          <section class="col-sm-6"> <!-- NOTE: DATOS PERSONALES: -->
             
             <div class="card card-teal text-center">
                 <div class="card-header">
@@ -203,28 +205,33 @@
                     </div>
 
                     <div class="mb-2">
-                        <button class="btn mr-2 btn-warning">Persona</button>
-                        <button class="btn mr-2 btn-warning">Organización</button>
-                        <button class="btn mr-2 btn-warning">Eliminar</button>
-                        <button class="btn btn-warning">Loguearse</button>
+                        <button class="btn mr-2 btn-info">Persona</button>
+                        <button class="btn mr-2 btn-info">Organización</button>
+                        <button class="btn mr-2 btn-info">Eliminar</button>
+                        <button class="btn btn-info">Loguearse</button>
                     </div>
                     <div>
-                        <button class="btn mr-2 btn-warning">Perfil</button>
-                        <button class="btn mr-2 btn-warning">Grupo</button>
-                        <button class="btn mr-2 btn-warning">Habilitación</button>
-                        <button class="btn btn-warning">Seguimiento</button>
+                        <button class="btn mr-2 btn-info">Perfil</button>
+                        <button class="btn mr-2 btn-info">Grupo</button>
+                        <button class="btn mr-2 btn-info">Habilitación</button>
+                        <button class="btn btn-info">Seguimiento</button>
                     </div>
                 </div>
               </div> <!-- .card -->
           </section>
 
-          <section class="col-sm-6">
+          <section class="col-sm-6"> <!-- NOTE: DATOS DE LA PRÁCTICA -->
             <div class="card card-teal text-center">
-                <div class="card-header">
+                <div class="card-header d-flex align-items-center justify-content-between">
                   <h3 class="card-title">DATOS DE LA PRÁCTICA:</h3>
+                    <div class="ml-auto">
+                        <button class="btn btn-info btn-sm">Colega</button>
+                        <button class="btn btn-info btn-sm">Ruta</button>
+                        <button class="btn btn-info btn-sm">Referente</button>
+                    </div>
                 </div>
 
-                <div style="height: 390px;" class="card-body overflow-auto">
+                <div style="height: 390px;" class="card-body overflow-auto"> <!-- NOTE: DATOS DE LA PRÁCTICA -->
                     <div class="callout callout-info text-left ">
                         <p class="font-weight-bold">Nombre de la Práctica: 
                             <span class="font-weight-normal">Desarrollo Frontend</span>
@@ -291,18 +298,169 @@
                         </p>
                     </div>
                 </div>
-              </div> <!-- .card -->
+            </div> <!-- .card -->
           </section>
           
         </div> <!-- .row -->
 
-        <div class="row">
+        <div class="row"> <!-- NOTE: FILA 3 -->
+            <div class="col-sm-12">
+                <div class="card card-teal">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <h3 class="card-title">PRÁCTICAS (1) (Tilde la práctica para seleccionarla para su sistematización)</h3>
+                        <div class="ml-auto">
+                            <button class="btn btn-info">Nueva</button>
+                        </div>
+                    </div><!-- .card-header -->
 
-        </div>
+                    <div class="card-body">
+                        <div class="callout callout-info d-flex align-items-center">
+                            <button class="btn text-left btn-default w-75">1. Desarrollo Frontend</button>
+                            <a href="#" class="ml-5 mr-3"><i class="fas fa-edit"></i></a>
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="checkboxPrimary2">
+                                <label for="checkboxPrimary2"></label>
+                            </div>
+                        </div>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->
+            </div><!-- .col-sm-12 -->
+        </div><!-- .row -->
 
-        <div class="row">
+        <div class="row"> <!-- NOTE: FILA 4 -->
+            <div class="col-sm-12">
+                <div class="card card-teal">
+                    <div class="card-header d-flex align-items-center">
+                        <h3 class="card-title">TEMÁTICA DE LA PRÁCTICA</h3>
+                    </div><!-- .card-header -->
 
-        </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <div class="row">
+                            <div class="form-group mr-5">
+                                <label>Diágnostico Preliminar</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Ámbito social</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Clasificación del objetivo</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Finalidad</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Tipo de pobl. destinataria</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pobl. directa</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Pobl. indirecta</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Pobl. etaria</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Tipo de Evaluación</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mr-5">
+                                <label>Perfil del MSP</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Trabajo en red</label>
+                                <select class="form-control">
+                                  <option>option 1</option>
+                                  <option>option 2</option>
+                                  <option>option 3</option>
+                                  <option>option 4</option>
+                                  <option>option 5</option>
+                                </select>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .card-body -->
+                </div><!-- .card -->
+            </div><!-- .col-sm-12 -->
+        </div><!-- .row -->
 
       </div><!-- .container-fluid -->
       
