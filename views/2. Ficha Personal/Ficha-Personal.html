@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sistema Reprasis</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/c972563034.js" crossorigin="anonymous"></script>
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../src/css/adminlte.min.css">
+  <!-- Select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <script>
+		function initFreshChat() {
+		  window.fcWidget.init({
+			token: "500639a8-a901-4257-bd75-6ea4c351b8d3",
+			host: "https://wchat.freshchat.com"
+		  });
+		}
+		function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+  </script>
+</head>
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+
+<div class="wrapper"> <!-- NOTE: CONTENEDOR -->
+  
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-teal"> <!-- NOTE: BARRA SUPERIOR -->
+    
+    <ul class="navbar-nav"> <!-- NOTE: TOGGLE DE LA BARRA IZQUIERDA  -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto"> <!-- NOTE: PERFIL DEL USUARIO -->
+      <li class="nav-item dropdown user-menu">
+        
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+          <img src="../../src/img/avatar.svg" class="user-image img-circle elevation-2" alt="User Image">
+          <span class="d-none d-md-inline">Reprasis Coordinación</span>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right"> 
+          <!-- Imagen del usuario -->
+          <li class="user-header bg-teal">
+            <img src="../../src/img/avatar.svg" class="img-circle elevation-2" alt="User Image">
+
+            <p>
+              Reprasis Coordinación
+              <small>Coordinadora</small>
+            </p>
+          </li>
+          <!-- Menu Footer-->
+          <li class="user-footer">
+            <a href="../../index.html" class="btn btn-default btn-flat d-block">Cerrar Sesión</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+  </nav> <!-- /.navbar -->
+
+
+  <aside class="main-sidebar sidebar-light-teal elevation-4"> <!-- NOTE: ASIDE IZQUIERDO -->
+    
+    <a href="./Inicio.html" class="brand-link navbar-teal">
+      <img src="../../src/img/logo-reprasis.png"
+           alt="Reprasis Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-bold text-white">Sistema Reprasis</span>
+    </a>
+
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          
+          <li class="nav-item">
+          
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Inicio
+              </p>
+            </a>
+          </li><!-- Inicio -->
+
+          <li class="nav-item">
+            <a href="../2. Ficha Personal/Ficha-Personal.html" class="nav-link">
+              <i class="nav-icon fas fa-clipboard"></i>
+              <p>
+                Ficha Personal
+              </p>
+            </a>
+          </li><!-- Ficha Personal -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                MSP
+              </p>
+            </a>
+          </li><!-- MSP -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-search"></i>
+              <p>
+                Búsqueda de Prácticas
+              </p>
+            </a>
+          </li><!-- Búsqueda de prácticas -->
+
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Mensajería
+              </p>
+            </a>
+          </li> --> <!-- TODO: VER QUE SE HACE CON MENSAJERIA -->
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-question"></i>
+              <p>
+                Más Información
+              </p>
+            </a>
+          </li><!-- Más Información -->
+
+        </ul>
+      </nav>
+    </div><!-- /.sidebar -->
+    
+  </aside>
+
+  <div class="content-wrapper"> <!-- NOTE: CONTENEDOR -->
+    
+    <section class="content-header"> <!-- NOTE: HEADER FILA 1 -->
+      <div class="container-fluid">
+        <div class="row mb-2">
+            
+            <div class="col-sm-4">
+                <div class="form-group">
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">-- Seleccione una Persona --</option>
+                    <option>Usuario 1</option>
+                    <option>Usuario 2</option>
+                    <option>Usuario 3</option>
+                    <option>Usuario 4</option>
+                    <option>Usuario 5</option>
+                    <option>Usuario 6</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+            </div>
+
+            <div class="col-sm-4 text-center">
+                <h1>Ficha Personal</h1>
+            </div>
+
+            <div class="col-sm-4 text-right">
+                <a href="#">Módulo de Consultas</a>
+            </div>
+        </div>
+      </div><!-- .container-fluid -->
+    </section><!-- .content-header -->
+
+    <section class="content"> <!-- NOTE: FILA 2 DATOS -->
+
+      <div class="container-fluid">
+        
+        <div class="row">
+          
+          <section class="col-sm-6">
+            
+            <div class="card card-teal text-center">
+                <div class="card-header">
+                  <h3 class="card-title">DATOS PERSONALES:</h3>
+                </div>
+
+                <div class="card-body">
+                    <div class="callout callout-info text-left">
+                        <p>Bryan Silva (Estudiante)</p>
+                        <p class="font-weight-bold">Correo: <span class="font-weight-normal">brandonb2816@gmail.com</span></p>
+                        <p class="font-weight-bold">Usuario: <span class="font-weight-normal">bsilva</span></p>
+                        <p class="font-weight-bold">Último Ingreso: <span class="font-weight-normal">14/04/2020</span></p>
+                        <p class="font-weight-bold">Tutor: <a href="#" class="text-decoration-none text-primary">Florencia Gorri</a></p>
+                        <p class="font-weight-bold">Consultor: <a href="#" class="text-decoration-none text-primary">Florencia Gorri</a></p>    
+                    </div>
+
+                    <div class="mb-2">
+                        <button class="btn mr-2 btn-warning">Persona</button>
+                        <button class="btn mr-2 btn-warning">Organización</button>
+                        <button class="btn mr-2 btn-warning">Eliminar</button>
+                        <button class="btn btn-warning">Loguearse</button>
+                    </div>
+                    <div>
+                        <button class="btn mr-2 btn-warning">Perfil</button>
+                        <button class="btn mr-2 btn-warning">Grupo</button>
+                        <button class="btn mr-2 btn-warning">Habilitación</button>
+                        <button class="btn btn-warning">Seguimiento</button>
+                    </div>
+                </div>
+              </div> <!-- .card -->
+          </section>
+
+          <section class="col-sm-6">
+            <div class="card card-teal text-center">
+                <div class="card-header">
+                  <h3 class="card-title">DATOS DE LA PRÁCTICA:</h3>
+                </div>
+
+                <div style="height: 390px;" class="card-body overflow-auto">
+                    <div class="callout callout-info text-left ">
+                        <p class="font-weight-bold">Nombre de la Práctica: 
+                            <span class="font-weight-normal">Desarrollo Frontend</span>
+                        </p>
+
+                        <p class="font-weight-bold">Estado del MSP: 
+                            <span class="font-weight-normal">Fase III Subfase 1. Sistematización iniciada el 14/04/2020</span>
+                        </p>
+                        <p class="font-weight-bold">Práctica Colega: 
+                            <span class="font-weight-normal">-</span>
+                        </p>
+                        <p class="font-weight-bold">Referente Institucional: 
+                            <span class="font-weight-normal">-</span>
+                        </p>
+                        <p class="font-weight-bold">Año de inicio de la práctica: 
+                            <span class="font-weight-normal">2020</span>
+                        </p>
+                        <p class="font-weight-bold">Existe en la actualidad: 
+                            <span class="font-weight-normal">Sí</span>
+                        </p>
+                        <p class="font-weight-bold">Objetivo: 
+                            <span class="font-weight-normal">Enseñar a futuros ingenieros</span>
+                        </p>
+                        <p class="font-weight-bold">Tipo de población: 
+                            <span class="font-weight-normal">Estudiantes</span>
+                        </p>
+                        <p class="font-weight-bold">Ámbito de Cobertura: 
+                            <span class="font-weight-normal">Provincial</span>
+                        </p>
+                        <p class="font-weight-bold">Localización: 
+                            <span class="font-weight-normal">1) Capital Federal, Argentina</span>
+                        </p>
+                        <p class="font-weight-bold">Encuadre metodológico: 
+                            <span class="font-weight-normal">Participativo</span>
+                        </p>
+                        <p class="font-weight-bold">Ámbito social:<span class="font-weight-normal">Derechos</span>
+                        </p>
+                        <p class="font-weight-bold">Clasificación del objetivo: 
+                            <span class="font-weight-normal">Divulgación</span>
+                        </p>
+                        <p class="font-weight-bold">Tipo de Población Destinataria: 
+                            <span class="font-weight-normal">Sectores económicamente vulnerables</span>
+                        </p>
+                        <p class="font-weight-bold">Finalidad: 
+                            <span class="font-weight-normal">Corto</span>
+                        </p>
+                        <p class="font-weight-bold">Cantidad de Población Directa: 
+                            <span class="font-weight-normal">0</span>
+                        </p>
+                        <p class="font-weight-bold">Cantidad de Población Indirecta: 
+                            <span class="font-weight-normal">0</span>
+                        </p>
+                        <p class="font-weight-bold">Población etaria: 
+                            <span class="font-weight-normal">Adolescencia</span>
+                        </p>
+                        <p class="font-weight-bold">Tipo de evaluación: 
+                            <span class="font-weight-normal">12411</span>
+                        </p>
+                        <p class="font-weight-bold">Tamaño de la Red: 
+                            <span class="font-weight-normal">-</span>
+                        </p>
+                        <p class="font-weight-bold">Diversidad de la Red: 
+                            <span class="font-weight-normal">-</span>
+                        </p>
+                    </div>
+                </div>
+              </div> <!-- .card -->
+          </section>
+          
+        </div> <!-- .row -->
+
+        <div class="row">
+
+        </div>
+
+        <div class="row">
+
+        </div>
+
+      </div><!-- .container-fluid -->
+      
+    </section> <!-- .content -->
+
+  </div><!-- .content-wrapper -->
+    
+  <footer class="main-footer"> <!-- NOTE: FOOTER -->
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2007-2020 <a class="text-teal" href="http://www.reprasis.org/" target="_blank">Sistema Reprasis</a>.</strong> Todos los derechos reservados
+  </footer><!-- .main-footer -->
+
+  </div>
+  <!-- /.content-wrapper -->
+
+</div> <!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- jQuery UI -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+<!-- Select2 -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+<!-- Bootstrap 4 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- AdminLTE App -->
+<script src="../../src/js/adminlte.min.js"></script>
+
+
+
+<script> // NOTE: SCRIPT DEL TOOLTIP DE POPPER JS
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+</script>
+
+<script src="https://snippets.freshchat.com/js/fc-pre-chat-form-v2.js"></script>
+<script>
+  var preChatTemplate = {
+    //Form header color and Submit button color.
+    mainbgColor: '#0088CD',
+    //Form Header Text and Submit button text color.
+    maintxColor: '#fff',
+    //Chat Form Title
+    heading: 'Chat con Tutores',
+    //Chat form Welcome Message
+    textBanner: 'Este chat servirá para que realices tus consultas a los tutores. Pero primero, toma un momento para contarnos acerca de ti.',
+    //Submit Button Label.
+    SubmitLabel: 'Empezar Chat',
+    //Fields List - Maximum is 5
+    //All the values are mandatory and the script will not work if not available.
+    fields : {
+      field1 : {
+        //Type can be either text or title
+        type: "text",
+        //Label for Field Title, can be in any language
+        label: "Nombre de tu práctica",
+        //Field ID for Title
+        fieldId: "práctica",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Ingresa un nombre de práctica válido"
+      },
+      field2 : {
+        //Type for Name - Do not Change
+        type: "name",
+        //Label for Field Name, can be in any language
+        label: "Nombre completo",
+        //Default - Field ID for Name - Do Not Change
+        fieldId: "name",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Ingresa un nombre válido"
+      },
+      field3 : {
+        //Type for Email - Do Not Change
+        type: "email",
+        //Label for Field Email, can be in any language
+        label: "Correo Eléctronico",
+        //Default - Field ID for Email - Do Not Change
+        fieldId: "email",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Ingresa un correo válido"
+      },
+      field4 : {
+        //Type for Dropdown
+        type: "dropdown",
+        //Label for Field Dropdown, can be in any language
+        label: "¿Cursas la Diplomatura?",
+        //Field ID for Plan Dropdown
+        fieldId: "plan",
+        //Required "yes" or "no"
+        required: "yes",
+        //Error text to be displayed
+        error: "Por favor, selecciona una opción",
+        //Options for the Dropdown field
+        options: ['Sí','No']
+      }
+    }
+  };
+  window.fcSettings = {
+    token: "500639a8-a901-4257-bd75-6ea4c351b8d3",
+    host: "https://wchat.freshchat.com",
+    config: {
+      cssNames: {
+        //The below element is mandatory. Please add any custom class or leave the default.
+        widget: 'custom_fc_frame',
+        //The below element is mandatory. Please add any custom class or leave the default.
+        expanded: 'custom_fc_expanded'
+      }
+    },
+    onInit: function() {
+      console.log('widget init');
+      fcPreChatform.fcWidgetInit(preChatTemplate);
+    }
+  };
+</script>
+
+<script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
+  
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+    });
+  </script>
+<script src="https://wchat.freshchat.com/js/widget.js" async></script>
+
+</body>
+</html>
