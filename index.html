@@ -4,6 +4,8 @@
 	<title>Sistema Reprasis</title>
 	<link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="src/css/popup.css">
+	<!-- jQuery Modal -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<link rel="stylesheet" type="text/css" href="src/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/c972563034.js" crossorigin="anonymous"></script>
@@ -63,7 +65,7 @@
 		</footer> <!-- Footer -->
 
 		<!-- Popup -->
-		<!-- <nav class="menu">
+	 	<nav class="menu">
 			<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
 			<label class="menu-open-button" for="menu-open">
 			  <span class="hamburger hamburger-1"></span>
@@ -71,14 +73,44 @@
 			  <span class="hamburger hamburger-3"></span>
 			</label>
 			
-			<a href="#" class="menu-item"> <i class="fas fa-question"></i> </a>
-			<a href="#" class="menu-item"> <i class="fab fa-facebook-f"></i> </a>
-			<a href="#" class="menu-item"> <i class="fab fa-twitter"></i> </a>
-			<a href="#" class="menu-item"> <i class="fab fa-youtube"></i> </a>
-		</nav> -->
+			<!-- Botones -->
+			<a href="#" class="menu-item insc"> <i class="fas fa-user-plus"></i> </a>
+			<a href="#" class="menu-item equip"> <i class="fas fa-users"></i> </a>
+			<a href="#" class="menu-item serparte"> <i class="fas fa-user-friends"></i> </a>
+			<a href="#" class="menu-item apadrinar"> <i class="fas fa-handshake"></i> </a>
+		</nav>
 
 	</div><!-- .container -->
+	
 
+	<!-- Remember to include jQuery :) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+	<!-- jQuery Modal -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+	<!-- Tooltip -->
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script>
+		tippy('.insc', {
+			content: "Inscribete en el sistema",
+		});
+		tippy('.equip', {
+			content: "¿Quiénes Somos?",
+		});
+		tippy('.serparte', {
+			content: "¿Cómo ser parte?",
+		});
+		tippy('.insc', {
+			content: "Inscribete en el sistema",
+		});
+		tippy('.apadrinar', {
+			content: "Apadrinar",
+		});
+	</script>
+	<!-- End Tooltip -->
     <script type="text/javascript" src="src/js/main.js"></script>
 </body>
 </html>

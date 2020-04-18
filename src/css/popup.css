@@ -4,7 +4,7 @@
   }
   
   .menu-item, .menu-open-button {
-    background: #28bc89;
+    background: #0088CD;
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -98,27 +98,27 @@
   
   .menu-item:hover {
     background: white;
-    color: #28bc89;
+    color: #0088CD;
   }
 
   .menu-item:nth-child(3):hover {
     background: white;
-    color: #FC913A;
+    color: #0088CD;
   }
 
   .menu-item:nth-child(4):hover {
     background: white;
-    color: #669AE1;
+    color: #0088CD;
   }
 
   .menu-item:nth-child(5):hover {
     background: white;
-    color: #62C2E4;
+    color: #0088CD;
   }
 
   .menu-item:nth-child(6):hover {
     background: white;
-    color: #FE4365;
+    color: #0088CD;
   }
 
   .menu-item:nth-child(3) {
